@@ -1,0 +1,62 @@
+//
+//  Pch.pch
+//  WoWoZhe
+//
+//  Created by MS on 15/10/23.
+//  Copyright (c) 2015年 GHX. All rights reserved.
+//
+
+#ifndef WoWoZhe_Pch_pch
+#define WoWoZhe_Pch_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/************__OBJC__BEGIN************/
+// 里面的所有内容只能用到.m文件中或者.mm
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+//#import <Foundation/Foundation.h> ////这个框架可以根据具体情况在决定加不加吧
+
+
+
+
+// 1.判断是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+#ifdef DEBUG  // 调试阶段
+#define MYLog(...) NSLog(__VA_ARGS__)
+#else // 发布阶段
+#define MYLog(...)
+#endif
+
+
+
+// #define ABC 10 *******这是一个全局变量的例子 根据需求再加的
+
+
+// CGFloat _mcellHeight; //cell的高度 这一一个错误的示例  加上会编译连接错误
+
+
+
+#endif
+/************__OBJC__END************/
+
+
+/**
+ *  外面的所有东西,整个项目共享
+ */
+
+// #define Name 10 ********这是一个整个项目都能共享的全局变量的例子
+
+/**
+ pch文件的作用:
+ 1.存放一些全局的宏(整个项目中都用得上的宏)
+ 2.用来包含一些全部的头文件(整个项目中都用得上的头文件)
+ 3.能自动打开或者关闭日志输出功能
+ */
+
+
+
+
+#endif

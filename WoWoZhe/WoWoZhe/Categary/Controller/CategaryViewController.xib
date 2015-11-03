@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategaryViewController">
+            <connections>
+                <outlet property="collectionView" destination="C18-LY-xpa" id="xLq-zb-7De"/>
+                <outlet property="scrollView" destination="991-83-s2G" id="Jc6-Vf-opi"/>
+                <outlet property="searchBtn" destination="Muc-vs-FoF" id="vCj-dm-1hX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-Zd-uAO">
+                    <rect key="frame" x="0.0" y="64" width="600" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muc-vs-FoF">
+                            <rect key="frame" x="10" y="5" width="580" height="30"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                            <state key="normal" title="请输入你要购买的宝贝">
+                                <color key="titleColor" red="0.29604640151515149" green="0.29604640151515149" blue="0.29604640151515149" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="searchBtnClick:" destination="-1" eventType="touchUpInside" id="b2D-Kj-FHL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Muc-vs-FoF" firstAttribute="top" secondItem="m9c-Zd-uAO" secondAttribute="top" constant="5" id="GeE-GP-9hN"/>
+                        <constraint firstItem="Muc-vs-FoF" firstAttribute="leading" secondItem="m9c-Zd-uAO" secondAttribute="leading" constant="10" id="HEO-xz-pBT"/>
+                        <constraint firstAttribute="bottom" secondItem="Muc-vs-FoF" secondAttribute="bottom" constant="5" id="JzT-F6-z8F"/>
+                        <constraint firstAttribute="height" constant="40" id="Piw-0c-oid"/>
+                        <constraint firstAttribute="trailing" secondItem="Muc-vs-FoF" secondAttribute="trailing" constant="10" id="yf0-4e-2ZL"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="991-83-s2G">
+                    <rect key="frame" x="0.0" y="104" width="80" height="447"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="iHb-cu-hyJ"/>
+                    </constraints>
+                </scrollView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="C18-LY-xpa">
+                    <rect key="frame" x="80" y="104" width="520" height="447"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IRx-gu-LdG">
+                        <size key="itemSize" width="49" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="C18-LY-xpa" firstAttribute="top" secondItem="m9c-Zd-uAO" secondAttribute="bottom" id="1lc-io-8rk"/>
+                <constraint firstItem="C18-LY-xpa" firstAttribute="leading" secondItem="991-83-s2G" secondAttribute="trailing" id="CTo-2O-eiu"/>
+                <constraint firstAttribute="bottom" secondItem="991-83-s2G" secondAttribute="bottom" constant="49" id="D89-1G-ih9"/>
+                <constraint firstItem="m9c-Zd-uAO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ei4-hw-vkR"/>
+                <constraint firstAttribute="trailing" secondItem="m9c-Zd-uAO" secondAttribute="trailing" id="FBt-yw-rWE"/>
+                <constraint firstItem="991-83-s2G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pev-5G-qVa"/>
+                <constraint firstAttribute="trailing" secondItem="C18-LY-xpa" secondAttribute="trailing" id="XDt-XN-ybu"/>
+                <constraint firstAttribute="bottom" secondItem="C18-LY-xpa" secondAttribute="bottom" constant="49" id="Yn9-Cl-plO"/>
+                <constraint firstItem="m9c-Zd-uAO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ZDb-lZ-ZVX"/>
+                <constraint firstItem="991-83-s2G" firstAttribute="top" secondItem="m9c-Zd-uAO" secondAttribute="bottom" id="hMb-zu-pW2"/>
+            </constraints>
+            <point key="canvasLocation" x="548" y="237"/>
+        </view>
+    </objects>
+</document>

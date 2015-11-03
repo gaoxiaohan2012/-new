@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FirstViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1SA-LV-YVo">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="j2y-rW-leL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOf-aU-Fqa">
+                        <rect key="frame" x="2" y="160" width="156" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="sLz-SJ-4gj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-7g-739">
+                        <rect key="frame" x="2" y="180" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="6Yq-gb-T6j"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-Rc-1sw">
+                        <rect key="frame" x="114" y="180" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="TLc-0E-uSE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="你好">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="1SA-LV-YVo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="037-Gk-rj0"/>
+                <constraint firstAttribute="trailing" secondItem="OOf-aU-Fqa" secondAttribute="trailing" constant="2" id="7SN-tA-LwV"/>
+                <constraint firstItem="1SA-LV-YVo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9I9-KX-cKX"/>
+                <constraint firstItem="fBX-7g-739" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="CWI-wg-TkJ"/>
+                <constraint firstItem="OOf-aU-Fqa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="TXF-6K-nHS"/>
+                <constraint firstItem="WF7-Rc-1sw" firstAttribute="leading" secondItem="fBX-7g-739" secondAttribute="trailing" constant="12" id="Vix-h8-JiB"/>
+                <constraint firstItem="OOf-aU-Fqa" firstAttribute="top" secondItem="1SA-LV-YVo" secondAttribute="bottom" id="VjU-ek-crt"/>
+                <constraint firstAttribute="trailing" secondItem="1SA-LV-YVo" secondAttribute="trailing" id="YA4-BU-GQU"/>
+                <constraint firstItem="fBX-7g-739" firstAttribute="top" secondItem="OOf-aU-Fqa" secondAttribute="bottom" id="Zoz-ca-1hQ"/>
+                <constraint firstAttribute="bottom" secondItem="WF7-Rc-1sw" secondAttribute="bottom" id="fX1-nq-eMK"/>
+                <constraint firstAttribute="trailing" secondItem="WF7-Rc-1sw" secondAttribute="trailing" constant="6" id="ina-NT-K4d"/>
+                <constraint firstItem="WF7-Rc-1sw" firstAttribute="top" secondItem="OOf-aU-Fqa" secondAttribute="bottom" id="oLw-PS-9zu"/>
+            </constraints>
+            <size key="customSize" width="189" height="185"/>
+            <connections>
+                <outlet property="iconView" destination="1SA-LV-YVo" id="8oi-k0-laW"/>
+                <outlet property="likeBtn" destination="WF7-Rc-1sw" id="HGz-QF-zfg"/>
+                <outlet property="priceLabel" destination="fBX-7g-739" id="MaP-te-mcW"/>
+                <outlet property="titleLabel" destination="OOf-aU-Fqa" id="YSA-mp-Vnd"/>
+            </connections>
+            <point key="canvasLocation" x="183" y="246"/>
+        </collectionViewCell>
+    </objects>
+</document>
