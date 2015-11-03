@@ -35,6 +35,7 @@
 		22F0CCD21BDB649E00790D4B /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F0CCD01BDB649E00790D4B /* SliderCollectionViewCell.xib */; };
 		22F0CCD91BDB8A0000790D4B /* MenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0CCD71BDB8A0000790D4B /* MenuCollectionViewCell.m */; };
 		22F0CCDA1BDB8A0000790D4B /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F0CCD81BDB8A0000790D4B /* MenuCollectionViewCell.xib */; };
+		4E0C5B301BE8AD4E00781DEB /* XHTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C5B2F1BE8AD4E00781DEB /* XHTopScrollView.m */; };
 		4E0FEA141BDE18BB005966C4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0FEA121BDE18BB005966C4 /* LoginViewController.m */; };
 		4E0FEA151BDE18BC005966C4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FEA131BDE18BB005966C4 /* LoginViewController.xib */; };
 		4E14BA901BE0589D00E9D2F0 /* LoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14BA8F1BE0589D00E9D2F0 /* LoginWebViewController.m */; };
@@ -174,6 +175,8 @@
 		22F0CCD61BDB8A0000790D4B /* MenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCollectionViewCell.h; sourceTree = "<group>"; };
 		22F0CCD71BDB8A0000790D4B /* MenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionViewCell.m; sourceTree = "<group>"; };
 		22F0CCD81BDB8A0000790D4B /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		4E0C5B2E1BE8AD4E00781DEB /* XHTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHTopScrollView.h; sourceTree = "<group>"; };
+		4E0C5B2F1BE8AD4E00781DEB /* XHTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHTopScrollView.m; sourceTree = "<group>"; };
 		4E0FEA111BDE18BB005966C4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4E0FEA121BDE18BB005966C4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4E0FEA131BDE18BB005966C4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -539,6 +542,8 @@
 		4E150B8F1BD8B85500FBA28B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C5B2E1BE8AD4E00781DEB /* XHTopScrollView.h */,
+				4E0C5B2F1BE8AD4E00781DEB /* XHTopScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1040,6 +1045,7 @@
 				4E150C271BD8FF6D00FBA28B /* MKAnnotationView+WebCache.m in Sources */,
 				2225A6EE1BDCFAEA00A06154 /* categaryModel.m in Sources */,
 				2225A71E1BDD0B8700A06154 /* AFHTTPRequestOperation.m in Sources */,
+				4E0C5B301BE8AD4E00781DEB /* XHTopScrollView.m in Sources */,
 				2225A7291BDD0B8700A06154 /* UIAlertView+AFNetworking.m in Sources */,
 				4E150BFE1BD8FF6300FBA28B /* MJRefreshNormalHeader.m in Sources */,
 				2225A7241BDD0B8700A06154 /* AFURLRequestSerialization.m in Sources */,
