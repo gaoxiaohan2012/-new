@@ -9,7 +9,7 @@
 #import "ExperienceViewController.h"
 #import "XHTopScrollView.h"
 
-#define xh_ScoHeight 50.0f
+#define xh_ScoHeight 30.0f
 #define xh_size [UIScreen mainScreen].bounds.size
 
 @interface ExperienceViewController ()
@@ -21,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //我擦，，，我终于找到你这个牛逼的，，无与伦比的代码了。。。。。。。。。。。。。。。。。。。。。。。
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self createUI];
     
 }
@@ -39,8 +42,8 @@
     NSArray *vcArr = @[vc1,vc2,vc3];
     
     
-    XHTopScrollView *scrollView = [[XHTopScrollView alloc]initWithFrame:CGRectMake(0, 100, xh_size.width, xh_ScoHeight) TitleArr:btnArr ViewcontrollerArr:vcArr];
-    
+    XHTopScrollView *scrollView = [[XHTopScrollView alloc]initWithFrame:CGRectMake(0, 64, xh_size.width, xh_ScoHeight) TitleArr:btnArr ViewcontrollerArr:vcArr];
+        
     [self.view addSubview:scrollView];
 }
 
