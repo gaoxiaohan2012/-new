@@ -42,7 +42,7 @@
     NSArray *vcArr = @[vc1,vc2,vc3];
     
     
-    XHTopScrollView *scrollView = [[XHTopScrollView alloc]initWithFrame:CGRectMake(0, 64, xh_size.width, xh_ScoHeight) TitleArr:btnArr ViewcontrollerArr:vcArr];
+    XHTopScrollView *scrollView = [[XHTopScrollView alloc]initWithFrame:CGRectMake(0, 64, xh_size.width, xh_size.height-64-49) TitleArr:btnArr ViewcontrollerArr:vcArr];
         
     [self.view addSubview:scrollView];
 }
