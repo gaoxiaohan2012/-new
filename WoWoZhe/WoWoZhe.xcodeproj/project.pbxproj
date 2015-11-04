@@ -31,6 +31,8 @@
 		2225A7311BDD259C00A06154 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2225A7301BDD259C00A06154 /* SearchViewController.m */; };
 		228A505A1BDA946300F559B4 /* HLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 228A50571BDA946300F559B4 /* HLConnection.m */; };
 		228A505B1BDA946300F559B4 /* HLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 228A50591BDA946300F559B4 /* HLManager.m */; };
+		22EE4D021BE9A46C00E36435 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE4D001BE9A46C00E36435 /* SubViewController.m */; };
+		22EE4D031BE9A46C00E36435 /* SubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EE4D011BE9A46C00E36435 /* SubViewController.xib */; };
 		22F0CCD11BDB649E00790D4B /* SliderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0CCCF1BDB649E00790D4B /* SliderCollectionViewCell.m */; };
 		22F0CCD21BDB649E00790D4B /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F0CCD01BDB649E00790D4B /* SliderCollectionViewCell.xib */; };
 		22F0CCD91BDB8A0000790D4B /* MenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0CCD71BDB8A0000790D4B /* MenuCollectionViewCell.m */; };
@@ -169,6 +171,9 @@
 		228A50571BDA946300F559B4 /* HLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLConnection.m; sourceTree = "<group>"; };
 		228A50581BDA946300F559B4 /* HLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLManager.h; sourceTree = "<group>"; };
 		228A50591BDA946300F559B4 /* HLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLManager.m; sourceTree = "<group>"; };
+		22EE4CFF1BE9A46C00E36435 /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
+		22EE4D001BE9A46C00E36435 /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
+		22EE4D011BE9A46C00E36435 /* SubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubViewController.xib; sourceTree = "<group>"; };
 		22F0CCCE1BDB649E00790D4B /* SliderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCollectionViewCell.h; sourceTree = "<group>"; };
 		22F0CCCF1BDB649E00790D4B /* SliderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCollectionViewCell.m; sourceTree = "<group>"; };
 		22F0CCD01BDB649E00790D4B /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -544,6 +549,9 @@
 			children = (
 				4E0C5B2E1BE8AD4E00781DEB /* XHTopScrollView.h */,
 				4E0C5B2F1BE8AD4E00781DEB /* XHTopScrollView.m */,
+				22EE4CFF1BE9A46C00E36435 /* SubViewController.h */,
+				22EE4D001BE9A46C00E36435 /* SubViewController.m */,
+				22EE4D011BE9A46C00E36435 /* SubViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -957,6 +965,7 @@
 				4E150C001BD8FF6300FBA28B /* MJRefresh.bundle in Resources */,
 				4E0FEA151BDE18BC005966C4 /* LoginViewController.xib in Resources */,
 				22F0CCDA1BDB8A0000790D4B /* MenuCollectionViewCell.xib in Resources */,
+				22EE4D031BE9A46C00E36435 /* SubViewController.xib in Resources */,
 				2225A6F31BDCFF6900A06154 /* CategaryCollectionViewCell.xib in Resources */,
 				4E150B701BD8B80100FBA28B /* Images.xcassets in Resources */,
 			);
@@ -1012,6 +1021,7 @@
 				4E150B651BD8B80100FBA28B /* main.m in Sources */,
 				2225A6F61BDD022300A06154 /* CategaryButton.m in Sources */,
 				4E150C821BD8FFC000FBA28B /* NSData+SDDataCache.m in Sources */,
+				22EE4D021BE9A46C00E36435 /* SubViewController.m in Sources */,
 				4E150C311BD8FF6D00FBA28B /* UIImage+GIF.m in Sources */,
 				4E14BA901BE0589D00E9D2F0 /* LoginWebViewController.m in Sources */,
 				4E1CC75B1BDA14E900D0ED01 /* sliderModel.m in Sources */,

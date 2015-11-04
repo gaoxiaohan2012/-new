@@ -19,6 +19,7 @@
 //controller
 #import "SearchViewController.h"
 #import "LoginViewController.h"
+#import "SubViewController.h"
 
 //model
 #import "FirstModel.h"
