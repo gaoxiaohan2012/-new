@@ -8,7 +8,7 @@
 
 #import "SubViewController.h"
 
-@interface SubViewController ()
+@interface SubViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 

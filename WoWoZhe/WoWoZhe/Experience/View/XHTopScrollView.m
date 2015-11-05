@@ -83,7 +83,8 @@
     _BtnArr = [[NSMutableArray alloc]init];
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, xh_scrHeight)];
     _scrollView.userInteractionEnabled = YES;
-    _scrollView.pagingEnabled = YES;
+    //这一句千万他妈的不要写上 ，，，不然的话，就会自动滚动。。
+//    _scrollView.pagingEnabled = YES;
     _scrollView.showsHorizontalScrollIndicator = NO;
     
     _topScrollView = [[UIView alloc]initWithFrame:CGRectMake(0, xh_topScrY, xh_BtnWith, xh_topScrHeight)];
@@ -129,24 +130,25 @@
         _XHTopScrBlock(vc,_selectIndex);
     }
     
-//    //头部滚动条的位移
-//    [UIView animateWithDuration:0.3 animations:^{
-//        //CGPoint point = _scrollView.contentOffset;
-//        CGPoint point = CGPointMake(0, 0);
-//        //一个屏幕的btn总数
-//        NSInteger oneBtnCount = xh_screenSize.width / xh_BtnWith;
-//        //所有的btn总数
-//        NSInteger allBtnCount = _scrollView.contentSize.width / xh_BtnWith;
-//        //判断是否选中的btn超过了屏幕一半。
-//        if (_selectIndex > oneBtnCount/2) {
-//            //如果就剩最后几个btn了，，直接跳出，不再位移了。
-//            if (allBtnCount - _selectIndex <= oneBtnCount/2) {
-//                return;
-//            }
-//            point.x = xh_BtnWith * (_selectIndex - oneBtnCount/2);
-//            _scrollView.contentOffset = point;
-//        }
-//    }];
+//    头部滚动条的位移
+    [UIView animateWithDuration:0.3 animations:^{
+        CGPoint point = _scrollView.contentOffset;
+        CGFloat lastOffset = _scrollView.contentSize.width - xh_screenSize.width;
+        NSInteger oneBtnCount = xh_screenSize.width / xh_BtnWith;
+        if (_selectIndex <= oneBtnCount/2) {
+            return;
+        }else {
+            if (_scrollView.contentOffset.x >= lastOffset) {
+                point.x = lastOffset;
+                _scrollView.contentOffset = point;
+                return;
+            }
+            point.x = (_selectIndex - oneBtnCount/2) * xh_BtnWith;
+            _scrollView.contentOffset = point;
+        }
+
+    }];
+    
     
 }
 
@@ -177,26 +179,27 @@
         }
         
         //头部滚动条的位移
-//        [UIView animateWithDuration:0.3 animations:^{
-//            CGPoint point = _scrollView.contentOffset;
-//            //一个屏幕的btn总数
-//            NSInteger oneBtnCount = xh_screenSize.width / xh_BtnWith;
-//            //所有的btn总数
-//            NSInteger allBtnCount = _scrollView.contentSize.width / xh_BtnWith;
-//            //判断是否选中的btn超过了屏幕一半。
-//            if (_selectIndex > oneBtnCount/2) {
-//                //如果就剩最后几个btn了，，直接跳出，不再位移了。
-//                if (allBtnCount - _selectIndex <= oneBtnCount/2) {
-//                    return;
-//                }
-//                point.x = xh_BtnWith * (_selectIndex - oneBtnCount/2);
-//                _scrollView.contentOffset = point;
-//            }
-//        }];
+        [UIView animateWithDuration:0.3 animations:^{
+            CGPoint point = _scrollView.contentOffset;
+            //一个屏幕的btn总数
+            NSInteger oneBtnCount = xh_screenSize.width / xh_BtnWith;
+            //所有的btn总数
+            NSInteger allBtnCount = _scrollView.contentSize.width / xh_BtnWith;
+            //判断是否选中的btn超过了屏幕一半。
+            if (_selectIndex >= oneBtnCount/2) {
+                //如果就剩最后几个btn了，，直接跳出，不再位移了。
+                if (allBtnCount - _selectIndex <= oneBtnCount/2) {
+                    return;
+                }
+                point.x = xh_BtnWith * (_selectIndex - oneBtnCount/2);
+                _scrollView.contentOffset = point;
+            }else {
+                point.x = 0;
+                _scrollView.contentOffset  = point;
+            }
+        }];
         
     }
-    
-    
 }
 
 @end
