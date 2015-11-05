@@ -10,7 +10,10 @@
 
 @interface SubViewController : UIViewController
 
+@property (nonatomic,copy) NSString *urlStr;
 
+
+- (void)reloadData:(NSString *)urlStr;
 
 
 @end

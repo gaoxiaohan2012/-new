@@ -10,7 +10,7 @@
 #import "SubViewController.h"
 
 #define xh_BtnWith 50.0f
-#define xh_BtnFont 13.0f
+#define xh_BtnFont 12.0f
 #define xh_topScrHeight 2.0f
 #define xh_scrHeight 30.0f
 #define xh_screenSize [UIScreen mainScreen].bounds.size
@@ -31,24 +31,32 @@
     UIView *_topScrollView;//带动画的红条
     NSInteger _selectIndex;
     NSMutableArray *_vcArr;//将传进来的vcname装换成对象后，，存起来。
+    NSArray *_urlStrArr;
 }
  
-- (instancetype)initWithFrame:(CGRect)frame TitleArr:(NSArray *)titleArr ViewcontrollerNameArr:(NSArray *)vcNameArr {
+- (instancetype)initWithFrame:(CGRect)frame TitleArr:(NSArray *)titleArr ViewcontrollerNameArr:(NSArray *)vcNameArr urlStrArr:(NSArray *)urlArr{
     self = [super init];
     if (self) {
+        _BtnArr = [[NSMutableArray alloc]init];
+        _vcArr = [[NSMutableArray alloc]init];
         self.frame = frame;
         _titleArr = titleArr;
         _ViewControlerArr = vcNameArr;
+        _urlStrArr = urlArr;
         self.userInteractionEnabled = YES;
-        [self createUI];
-        [self createSubView];
+        if (_urlStrArr.count == _titleArr.count) {
+            [self createUI];
+            [self createSubView];
+        }else {
+            NSLog(@"btn数组的个数与网址数组个数不同。");
+        }
     }
     
     return self;
 }
 #pragma mark -- 创建subview视图
 - (void)createSubView {
-    _vcArr = [[NSMutableArray alloc]init];
+
     
     _subScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, xh_scrHeight, self.frame.size.width, xh_screenSize.height - 64 - 49 - xh_scrHeight)];
     _subScrollView.userInteractionEnabled = YES;
@@ -70,7 +78,7 @@
             _selectIndex = i;
             //如果是第一个视图，，，就加在数据。用block传值，........................
             if (_XHTopScrBlock) {
-                _XHTopScrBlock(vc,_selectIndex);
+                _XHTopScrBlock(vc,_urlStrArr[_selectIndex]);
             }
         }
         [_vcArr addObject:vc];//将vc加到数据里面。
@@ -80,7 +88,7 @@
 }
 #pragma mark -- 创建滚动条和btn
 - (void)createUI {
-    _BtnArr = [[NSMutableArray alloc]init];
+    
     _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, xh_scrHeight)];
     _scrollView.userInteractionEnabled = YES;
     //这一句千万他妈的不要写上 ，，，不然的话，就会自动滚动。。
@@ -127,7 +135,7 @@
     //传值
     UIViewController *vc = _vcArr[_selectIndex];
     if (_XHTopScrBlock) {
-        _XHTopScrBlock(vc,_selectIndex);
+        _XHTopScrBlock(vc,_urlStrArr[_selectIndex]);
     }
     
 //    头部滚动条的位移
@@ -175,7 +183,7 @@
         //滚动到某个subview时候，加在数据，传值
         UIViewController *vc = _vcArr[_selectIndex];
         if (_XHTopScrBlock) {
-            _XHTopScrBlock(vc,_selectIndex);
+            _XHTopScrBlock(vc,_urlStrArr[_selectIndex]);
         }
         
         //头部滚动条的位移
