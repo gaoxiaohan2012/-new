@@ -27,12 +27,6 @@
     //视图消失前，，放弃第一响应
     [_searchBar resignFirstResponder];
     [super viewWillDisappear:animated];
-    
-    
-    
-    
-    
-    
 }
 
 
@@ -45,7 +39,7 @@
     _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     _searchBar.placeholder = @"请输入你想要的宝贝";
     _searchBar.delegate = self;
-    [_searchBar becomeFirstResponder];
+    //[_searchBar becomeFirstResponder];
     self.navigationItem.titleView = _searchBar;
     
     //设置rightItem

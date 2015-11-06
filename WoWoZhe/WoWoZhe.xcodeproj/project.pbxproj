@@ -31,6 +31,10 @@
 		22C904F41BEBC7190051937E /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C904E11BEBC7190051937E /* UIProgressView+AFNetworking.m */; };
 		22C904F51BEBC7190051937E /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C904E31BEBC7190051937E /* UIRefreshControl+AFNetworking.m */; };
 		22C904F61BEBC7190051937E /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C904E51BEBC7190051937E /* UIWebView+AFNetworking.m */; };
+		22D6AE881BEC5103008F214A /* ExperienceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D6AE871BEC5103008F214A /* ExperienceModel.m */; };
+		22D6AE8B1BEC615B008F214A /* MartshowsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D6AE8A1BEC615B008F214A /* MartshowsModel.m */; };
+		22D6AE8F1BEC6545008F214A /* ExperienceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D6AE8D1BEC6545008F214A /* ExperienceTableViewCell.m */; };
+		22D6AE901BEC6545008F214A /* ExperienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D6AE8E1BEC6545008F214A /* ExperienceTableViewCell.xib */; };
 		22EE4D021BE9A46C00E36435 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE4D001BE9A46C00E36435 /* SubViewController.m */; };
 		22EE4D031BE9A46C00E36435 /* SubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EE4D011BE9A46C00E36435 /* SubViewController.xib */; };
 		22F0CCD11BDB649E00790D4B /* SliderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0CCCF1BDB649E00790D4B /* SliderCollectionViewCell.m */; };
@@ -172,6 +176,13 @@
 		22C904E31BEBC7190051937E /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		22C904E41BEBC7190051937E /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		22C904E51BEBC7190051937E /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		22D6AE861BEC5103008F214A /* ExperienceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExperienceModel.h; path = WoWoZhe/Experience/ExperienceModel.h; sourceTree = SOURCE_ROOT; };
+		22D6AE871BEC5103008F214A /* ExperienceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExperienceModel.m; path = WoWoZhe/Experience/ExperienceModel.m; sourceTree = SOURCE_ROOT; };
+		22D6AE891BEC615B008F214A /* MartshowsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MartshowsModel.h; path = WoWoZhe/Experience/MartshowsModel.h; sourceTree = SOURCE_ROOT; };
+		22D6AE8A1BEC615B008F214A /* MartshowsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MartshowsModel.m; path = WoWoZhe/Experience/MartshowsModel.m; sourceTree = SOURCE_ROOT; };
+		22D6AE8C1BEC6545008F214A /* ExperienceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceTableViewCell.h; sourceTree = "<group>"; };
+		22D6AE8D1BEC6545008F214A /* ExperienceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceTableViewCell.m; sourceTree = "<group>"; };
+		22D6AE8E1BEC6545008F214A /* ExperienceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperienceTableViewCell.xib; sourceTree = "<group>"; };
 		22EE4CFF1BE9A46C00E36435 /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubViewController.h; path = ../View/SubViewController.h; sourceTree = "<group>"; };
 		22EE4D001BE9A46C00E36435 /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubViewController.m; path = ../View/SubViewController.m; sourceTree = "<group>"; };
 		22EE4D011BE9A46C00E36435 /* SubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SubViewController.xib; path = ../View/SubViewController.xib; sourceTree = "<group>"; };
@@ -545,6 +556,10 @@
 		4E150B8E1BD8B85500FBA28B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				22D6AE861BEC5103008F214A /* ExperienceModel.h */,
+				22D6AE871BEC5103008F214A /* ExperienceModel.m */,
+				22D6AE891BEC615B008F214A /* MartshowsModel.h */,
+				22D6AE8A1BEC615B008F214A /* MartshowsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -554,6 +569,9 @@
 			children = (
 				4E0C5B2E1BE8AD4E00781DEB /* XHTopScrollView.h */,
 				4E0C5B2F1BE8AD4E00781DEB /* XHTopScrollView.m */,
+				22D6AE8C1BEC6545008F214A /* ExperienceTableViewCell.h */,
+				22D6AE8D1BEC6545008F214A /* ExperienceTableViewCell.m */,
+				22D6AE8E1BEC6545008F214A /* ExperienceTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -959,6 +977,7 @@
 			files = (
 				4E150BB21BD8B9ED00FBA28B /* ExperienceViewController.xib in Resources */,
 				22F0CCD21BDB649E00790D4B /* SliderCollectionViewCell.xib in Resources */,
+				22D6AE901BEC6545008F214A /* ExperienceTableViewCell.xib in Resources */,
 				4E150BC11BD8BA9D00FBA28B /* MineViewController.xib in Resources */,
 				4E150BB71BD8BA0200FBA28B /* FirstViewController.xib in Resources */,
 				4E150BAD1BD8B9BB00FBA28B /* CategaryViewController.xib in Resources */,
@@ -1001,6 +1020,7 @@
 				2225A6F21BDCFF6900A06154 /* CategaryCollectionViewCell.m in Sources */,
 				4E150BF71BD8FF6300FBA28B /* MJRefreshAutoGifFooter.m in Sources */,
 				4E150C031BD8FF6300FBA28B /* UIScrollView+MJRefresh.m in Sources */,
+				22D6AE881BEC5103008F214A /* ExperienceModel.m in Sources */,
 				4E150C361BD8FF6D00FBA28B /* UIView+WebCacheOperation.m in Sources */,
 				4E1CC7551BDA14CB00D0ED01 /* FirstModel.m in Sources */,
 				4E150BF31BD8FF6300FBA28B /* MJRefreshBackFooter.m in Sources */,
@@ -1030,6 +1050,7 @@
 				4E14BA901BE0589D00E9D2F0 /* LoginWebViewController.m in Sources */,
 				22C904E81BEBC7190051937E /* AFHTTPSessionManager.m in Sources */,
 				4E1CC75B1BDA14E900D0ED01 /* sliderModel.m in Sources */,
+				22D6AE8F1BEC6545008F214A /* ExperienceTableViewCell.m in Sources */,
 				4E150C041BD8FF6300FBA28B /* UIView+MJExtension.m in Sources */,
 				4E150BC01BD8BA9D00FBA28B /* MineViewController.m in Sources */,
 				22C904EC1BEBC7190051937E /* AFURLRequestSerialization.m in Sources */,
@@ -1071,6 +1092,7 @@
 				4E150C881BD8FFC000FBA28B /* SDCycleScrollView.m in Sources */,
 				4E150C281BD8FF6D00FBA28B /* NSData+ImageContentType.m in Sources */,
 				4E150C341BD8FF6D00FBA28B /* UIImageView+HighlightedWebCache.m in Sources */,
+				22D6AE8B1BEC615B008F214A /* MartshowsModel.m in Sources */,
 				22C904F61BEBC7190051937E /* UIWebView+AFNetworking.m in Sources */,
 				4E150BA51BD8B87C00FBA28B /* RootViewController.m in Sources */,
 				4E150BF51BD8FF6300FBA28B /* MJRefreshFooter.m in Sources */,

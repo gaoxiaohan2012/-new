@@ -235,7 +235,7 @@
 - (void)rightItemBtnClick:(UIButton *)btn {
     SearchViewController *svc = [[SearchViewController alloc]init];
     svc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:svc animated:YES];
+    [self.navigationController pushViewController:svc animated:NO];
     
 }
 

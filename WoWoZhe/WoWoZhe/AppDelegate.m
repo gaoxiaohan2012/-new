@@ -16,7 +16,7 @@
 @implementation AppDelegate
 - (void)createRootViewController {
     MainTabBarController *mainTabVc = [[MainTabBarController alloc]init];
-    NSArray *arr = @[@"FirstViewController",@"CategaryViewController",@"MiaoshaViewController",@"ExperienceViewController",@"MineViewController"];
+    NSArray *arr = @[@"FirstViewController",@"CategaryViewController",@"MiaoshaViewController",@"ExperienceViewController",@"LoginViewController"];
     for ( int i = 0; i<arr.count; i++) {
         Class class = NSClassFromString(arr[i]);
         UIViewController *vc = [[class alloc]init];        

@@ -10,6 +10,9 @@
 #import "XHTopScrollView.h"
 #import "AFNetworking.h"
 #import "MJRefresh.h"
+#import "ExperienceModel.h"
+#import "ExperienceTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @interface SubViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -26,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //注册cell
+    [self registCell];
     _dataArr = [[NSMutableArray alloc]init];
     _page = 1;
     
@@ -36,13 +41,19 @@
     
     _tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         _page ++;
-        [_tableView.footer beginRefreshing];
         [self refreshData];
     }];
     
     [_tableView.header beginRefreshing];
-    _tableView.footer.automaticallyHidden = NO;
+//    _tableView.footer.automaticallyHidden = NO;
 }
+#pragma mark -- 注册cell
+- (void)registCell {
+    [_tableView registerNib:[UINib nibWithNibName:@"ExperienceTableViewCell" bundle:nil] forCellReuseIdentifier:@"ExperienceTableViewCell.h"];
+    
+}
+
+
 #pragma mark -- 刷新数据
 - (void)reloadData:(NSString *)urlStr {
     //判断是不是第一次或者数组有没有数据
@@ -73,6 +84,8 @@
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            [_tableView.header endRefreshing];
+            [_tableView.footer endRefreshing];
             NSLog(@"网络请求失败");
         }];
     }
@@ -82,7 +95,16 @@
 - (void)jsonData:(id)object {
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:object options:0 error:nil];
     if (dic) {
-        NSLog(@"%@",dic);
+        for (NSDictionary *martshowDic in [dic objectForKey:@"martshows"]) {
+            //加进来第一层数据
+            ExperienceModel *model = [[ExperienceModel alloc]init];
+            [model setValuesForKeysWithDictionary:dic];
+            //将cell的数据加进来。
+            [model setValuesForKeysWithDictionary:martshowDic];
+            [_dataArr addObject:model];
+        }
+        //NSLog(@"%@",_dataArr);
+        [_tableView reloadData];
     }
     
 }
@@ -91,22 +113,31 @@
 
 #pragma  mark -- tableView delegate 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return _dataArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 200;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    if (!cell) {
-        cell  = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-    }
+    ExperienceModel *model = [_dataArr objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = @"我是个大好人";
+    ExperienceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExperienceTableViewCell.h"];
+    [cell.mainIconView sd_setImageWithURL:[NSURL URLWithString:model.main_img]];
+    cell.promotionLabel.text = model.promotion;
+    cell.titleLabel.text = model.title;
+    cell.buyLabel.text = model.buying_info;
+    [cell.mjIconView sd_setImageWithURL:[NSURL URLWithString:model.mj_icon]];
+    cell.mjLabel.text  = model.mj_promotion;
+    
+    ///待完善。。。
+//    cell.timeLabel.text = [model.gmt_begin stringValue];
+    cell.timeLabel.text = @"剩余2小时";
+    
     
     return cell;
+
 }
 
 

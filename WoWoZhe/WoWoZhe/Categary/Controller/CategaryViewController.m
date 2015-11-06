@@ -206,7 +206,7 @@
     SearchViewController *svc  = [[SearchViewController alloc]init];
     svc.hidesBottomBarWhenPushed = YES;
     svc.dataArr = _btnArr;
-    [self.navigationController pushViewController:svc animated:YES];
+    [self.navigationController pushViewController:svc animated:NO];
     
 }
 
