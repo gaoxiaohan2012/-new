@@ -25,7 +25,7 @@
 }
 
 - (void)btnClick:(UIButton *)btn {
-    NSLog(@"首页点击了第%zd个btn",btn.tag-10);
+    NSLog(@"首页点击了第%zd个btn",btn.tag-100);
     
 }
 

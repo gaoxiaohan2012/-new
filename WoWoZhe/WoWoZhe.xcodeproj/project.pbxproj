@@ -14,6 +14,7 @@
 		2225A7311BDD259C00A06154 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2225A7301BDD259C00A06154 /* SearchViewController.m */; };
 		228A505A1BDA946300F559B4 /* HLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 228A50571BDA946300F559B4 /* HLConnection.m */; };
 		228A505B1BDA946300F559B4 /* HLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 228A50591BDA946300F559B4 /* HLManager.m */; };
+		229E2E791BEE44AC00170D1F /* SubWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2E781BEE44AC00170D1F /* SubWebViewController.m */; };
 		22C904E61BEBC7190051937E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C904C11BEBC7190051937E /* AFHTTPRequestOperation.m */; };
 		22C904E71BEBC7190051937E /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C904C31BEBC7190051937E /* AFHTTPRequestOperationManager.m */; };
 		22C904E81BEBC7190051937E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C904C51BEBC7190051937E /* AFHTTPSessionManager.m */; };
@@ -139,6 +140,8 @@
 		228A50571BDA946300F559B4 /* HLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLConnection.m; sourceTree = "<group>"; };
 		228A50581BDA946300F559B4 /* HLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLManager.h; sourceTree = "<group>"; };
 		228A50591BDA946300F559B4 /* HLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLManager.m; sourceTree = "<group>"; };
+		229E2E771BEE44AC00170D1F /* SubWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubWebViewController.h; path = ../View/SubWebViewController.h; sourceTree = "<group>"; };
+		229E2E781BEE44AC00170D1F /* SubWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubWebViewController.m; path = ../View/SubWebViewController.m; sourceTree = "<group>"; };
 		22C904C01BEBC7190051937E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		22C904C11BEBC7190051937E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		22C904C21BEBC7190051937E /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -549,6 +552,8 @@
 				22EE4CFF1BE9A46C00E36435 /* SubViewController.h */,
 				22EE4D001BE9A46C00E36435 /* SubViewController.m */,
 				22EE4D011BE9A46C00E36435 /* SubViewController.xib */,
+				229E2E771BEE44AC00170D1F /* SubWebViewController.h */,
+				229E2E781BEE44AC00170D1F /* SubWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1018,6 +1023,7 @@
 				4E150C2F1BD8FF6D00FBA28B /* SDWebImagePrefetcher.m in Sources */,
 				4E150BAC1BD8B9BB00FBA28B /* CategaryViewController.m in Sources */,
 				2225A6F21BDCFF6900A06154 /* CategaryCollectionViewCell.m in Sources */,
+				229E2E791BEE44AC00170D1F /* SubWebViewController.m in Sources */,
 				4E150BF71BD8FF6300FBA28B /* MJRefreshAutoGifFooter.m in Sources */,
 				4E150C031BD8FF6300FBA28B /* UIScrollView+MJRefresh.m in Sources */,
 				22D6AE881BEC5103008F214A /* ExperienceModel.m in Sources */,

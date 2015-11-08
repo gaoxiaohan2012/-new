@@ -8,6 +8,7 @@
 
 #import "ExperienceViewController.h"
 #import "XHTopScrollView.h"
+#import "SubWebViewController.h"
 
 #define xh_ScoHeight 40.0f
 #define xh_size [UIScreen mainScreen].bounds.size
@@ -38,6 +39,7 @@
     
     //我擦，，，我终于找到你这个牛逼的，，无与伦比的代码了。。。。。。。。。。。。。。。。。。。。。。。
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationItem.title = @"经验";
     [self createUI];
     
 }
@@ -46,7 +48,11 @@
     NSArray *btnArr  = @[@"上新",@"童装",@"童鞋",@"用品",@"玩具",@"女装",@"居家",@"食品",@"美妆",@"下期预告"];
     NSMutableArray *vcArr = [[NSMutableArray alloc]init];
     for (int i = 0; i < btnArr.count; i++) {
+        if (i == 0 ) {
+            [vcArr addObject:@"SubWebViewController"];
+        }else{
         [vcArr addObject:@"SubViewController"];
+        }
     }
     NSArray *urlArr = @[K_TM_SX_Url, K_TM_TZ_Url, K_TM_TX_Url, K_TM_YP_Url, K_TM_WJ_Url, K_TM_NZ_Url, K_TM_JJ_Url, K_TM_SP_Url, K_TM_MZ_Url, K_TM_XQ_Url];
     
@@ -54,8 +60,12 @@
     XHTopScrollView *scrollView = [[XHTopScrollView alloc]initWithFrame:CGRectMake(0, 64, xh_size.width, xh_size.height-64-49) TitleArr:btnArr ViewcontrollerNameArr:vcArr urlStrArr:urlArr];
     //刷新数据。。。。。。
     scrollView.XHTopScrBlock = ^(UIViewController *vc ,NSString *urlStr){
-        
-        [(SubViewController *)vc reloadData:urlStr];
+        if ([vc isKindOfClass:[SubWebViewController class]]) {
+            [(SubWebViewController *)vc reloadWebView:urlStr];
+        }else {
+            [(SubViewController *)vc reloadData:urlStr];
+
+        }
     };
         
     [self.view addSubview:scrollView];

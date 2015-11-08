@@ -7,7 +7,7 @@
 //
 
 #import "XHTopScrollView.h"
-#import "SubViewController.h"
+#import "SubWebViewController.h"
 
 #define xh_BtnWith 50.0f
 #define xh_BtnFont 12.0f
@@ -16,7 +16,7 @@
 #define xh_screenSize [UIScreen mainScreen].bounds.size
 
 #define xh_topScrY xh_scrHeight - xh_topScrHeight
-#define xh_Value arc4random_uniform(256)/255.0f
+//#define xh_Value arc4random_uniform(256)/255.0f
 
 @interface XHTopScrollView()<UIScrollViewDelegate>
 
@@ -69,17 +69,18 @@
         Class class = NSClassFromString(vcName);
         UIViewController *vc = [[class alloc]init];
         //测试用，，随机色。。。。。。
-        vc.view.backgroundColor = [UIColor colorWithRed:xh_Value green:xh_Value blue:xh_Value alpha:1];
+//        vc.view.backgroundColor = [UIColor colorWithRed:xh_Value green:xh_Value blue:xh_Value alpha:1];
         vc.view.frame = CGRectMake(i * xh_screenSize.width, 0, xh_screenSize.width, _subScrollView.frame.size.height);
         
         [_subScrollView addSubview:vc.view];
         _subScrollView.contentSize = CGSizeMake((i+1) * xh_screenSize.width, 0);
         if (i == 0) {
             _selectIndex = i;
-            //如果是第一个视图，，，就加在数据。用block传值，........................
-            if (_XHTopScrBlock) {
-                _XHTopScrBlock(vc,_urlStrArr[_selectIndex]);
-            }
+/*
+ 此处为第一个视图的数据加载方法，，需要它自己去实现。在这里引进头文件.......................................................
+
+ */
+            [(SubWebViewController *)vc reloadWebView:_titleArr[0]];
         }
         [_vcArr addObject:vc];//将vc加到数据里面。
     i ++;
