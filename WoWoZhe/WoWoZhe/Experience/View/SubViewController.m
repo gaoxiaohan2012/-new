@@ -78,10 +78,13 @@
         manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         [manager GET:_urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible  = NO;
+            //上新页面的数据
+            if ([_urlStr isEqualToString:@"http://sapi.beibei.com/resource/ads-iPhone-2147483646-App%20Store-1_3_4_5_6_7_19_22_42_28_36_43-3.3.1-0.html"]) {
+                [self jsonFirstData:responseObject];
+            }else {
             //json解析
             [self jsonData:responseObject];
-            
-            
+            }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             [_tableView.header endRefreshing];
@@ -90,6 +93,12 @@
         }];
     }
 }
+#pragma mark -- 上新网址的json解析
+- (void)jsonFirstData:(id)object {
+    
+    
+}
+
 
 #pragma mark -- jsonData
 - (void)jsonData:(id)object {
@@ -133,7 +142,14 @@
     
     ///待完善。。。
 //    cell.timeLabel.text = [model.gmt_begin stringValue];
-    cell.timeLabel.text = @"剩余2小时";
+    NSDate *date = [NSDate date];
+    NSTimeInterval now = [date timeIntervalSince1970];
+    NSLog(@"%zd   %.f",model.gmt_end.integerValue,now);
+    NSInteger end = model.gmt_end.integerValue;
+    
+    NSInteger left = (end - now) / 3600 ;
+    
+    cell.timeLabel.text = [NSString stringWithFormat:@"%zd",left];
     
     
     return cell;

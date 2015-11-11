@@ -24,13 +24,13 @@
     [super viewDidLoad];
     _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:_webView];
-    [self reload];
+    [self reloadData];
 }
 - (void)reloadWebView:(NSString *)urlStr {
     _urlStr = urlStr;
-    [self reload];
+    [self reloadData];
 }
-- (void)reload {
+- (void)reloadData {
     //数据没加载成功，就加载。
     if (!_isReload) {
         if (_urlStr) {
